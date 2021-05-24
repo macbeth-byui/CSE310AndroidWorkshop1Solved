@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-class SayHello : AppCompatActivity() {
+class HelloActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_say_hello)
-        val tvMessage = findViewById<TextView>(R.id.tvMessage)
-        val name = intent.getStringExtra("name")
-        tvMessage.text = "Hello $name"
+        setContentView(R.layout.activity_hello)
+
+        val tvMessage : TextView = findViewById(R.id.tv_message)
+        tvMessage.text = "Hello World from " + intent.getStringExtra("name")
     }
 }
